@@ -35,7 +35,7 @@ class Arrow {
 
 		this._target = target;
 
-		this._input = this._$el.find('input');
+		this._input = this._$el.find('input').forceNumericOnly();
 
 		setTimeout( ()=> {
 			this._input.focus();

@@ -40,7 +40,7 @@ var Arrow = function () {
 
 				this._target = target;
 
-				this._input = this._$el.find('input');
+				this._input = this._$el.find('input').forceNumericOnly();
 
 				setTimeout(function () {
 						_this._input.focus();
@@ -111,7 +111,7 @@ jQuery.fn.forceNumericOnly = function () {
 	});
 };
 
-var task = new _task2.default();
+var task = new _task2.default([6, 9], [11, 14]);
 
 var arrowA = new _arrow2.default(0, task.getA(), $('.task__a'));
 
@@ -195,12 +195,12 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Task = function () {
-	function Task() {
+	function Task(starDistance, endDistance) {
 		_classCallCheck(this, Task);
 
-		this._a = Math.floor(Math.random() * 4 + 6);
+		this._a = Math.floor(Math.random() * (starDistance[1] - starDistance[0] + 1) + 6);
 
-		this._b = Math.floor(Math.random() * 4 + 11 - this._a);
+		this._b = Math.floor(Math.random() * (endDistance[1] - endDistance[0] + 1) + endDistance[0] - this._a);
 
 		$('.task__a').html(this._a);
 
