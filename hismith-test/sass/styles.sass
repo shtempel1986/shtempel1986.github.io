@@ -704,10 +704,12 @@ strong.how__step
 	&-wrapper
 		width: 169px
 		float: left
+		&:last-child
+			.cards-table-column
+				border-right: none
 	&-column
 		border-right: 1px solid $white-eight
-		&:last-child
-			border-right: none
+
 		.cards-table__td
 			text-decoration: none
 			color: $warm-grey-three
@@ -781,8 +783,6 @@ strong.how__step
 		font-weight: normal
 		vertical-align: middle
 		&::placeholder
-			font-size: 14px
-			line-height: 1.86
 			color: $warm-grey-two
 	&__span
 		margin-left: 16px

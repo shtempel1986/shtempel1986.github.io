@@ -968,12 +968,12 @@ strong.how__step {
   float: left;
 }
 
-.cards-table-column {
-  border-right: 1px solid #d8d8d8;
+.cards-table-wrapper:last-child .cards-table-column {
+  border-right: none;
 }
 
-.cards-table-column:last-child {
-  border-right: none;
+.cards-table-column {
+  border-right: 1px solid #d8d8d8;
 }
 
 .cards-table-column .cards-table__td {
@@ -1076,8 +1076,6 @@ strong.how__step {
 }
 
 .subscribe__input::placeholder {
-  font-size: 14px;
-  line-height: 1.86;
   color: #9b9b9b;
 }
 
