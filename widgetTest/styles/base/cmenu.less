@@ -1,0 +1,84 @@
+.cmenu {
+  /*display: none;*/
+  position: absolute;
+  display: block;
+  cursor: default;
+  background: #FFF8EE;
+  border: 1px solid #bababa;
+  padding: 0px;
+  z-index: 1000;
+  font-size: 12px;
+  font-weight: normal;
+  box-shadow: 0px 1px 5px #666;
+  -webkit-box-shadow: 0 1px 5px #666;
+  -moz-box-shadow: 0 1px 5px #666;
+  img {
+    vertical-align: middle;
+  }
+  hr {
+    color: #fedf8f;
+  }
+  .itemSelected {
+    background: #D3E2E5;
+    color: #fff;
+  }
+}
+
+.cmenu-item {
+  padding: 2px;
+  padding-right: 16px;
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: normal;
+  &:hover {
+    background: #336;
+    color: #fff;
+  }
+}
+
+.cmenu-disabled {
+  color: gray;
+  opacity: 0.5;
+}
+
+.cmenu-icon {
+  margin-left: 4px;
+}
+
+.cmenu-checkbox {
+  margin: 1px 3px 0 0;
+  width: 16px;
+  float: left;
+}
+
+.cmenu-title {
+  margin-left: 6px;
+}
+
+.sprite-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.cmenu-has-submenu {
+  background-image: url('../../images/system/page-next.gif');
+  position: absolute;
+  right: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.cmenu-left-line {
+  position: absolute;
+  width: 26px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#fff7ec, endColorstr=#fede8b);
+  background: -webkit-linear-gradient(top, bottom, #fff7ec, #fede8b);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(1, #fff7ec), color-stop(0, #fede8b));
+  background: -moz-linear-gradient(top, #fff7ec, #fede8b);
+  background: -o-linear-gradient(top, #fff7ec, #fede8b);
+  background: -ms-linear-gradient(top, #fff7ec, #fede8b);
+  z-index: -1;
+}

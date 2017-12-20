@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CIToRUS</title>
+	<meta charset="UTF-8">
+
+	<script src="vendor/jquery.js"></script>
+	<script src="vendor/lodash.js"></script>
+
+	<script src="dist/citorus.min.js"></script>
+	<!--<link rel="stylesheet" type="text/css" href="styles/base/citorus.min.css">-->
+	<link rel="stylesheet" type="text/css" href="styles/base/cmenu.css">
+	<link rel="stylesheet" type="text/css" href="styles/base/style.css">
+	<link rel="stylesheet" type="text/css" href="styles/base/styles.css">
+
+	<script src="widgets/sampleWidget/sampleWidget.js"></script>
+
+</head>
+<body>
+<div id="plate" class="main"></div>
+<div class="header">
+	<img id="create" src="images/system/header-logo-1.png">
+</div>
+
+<script>
+	$(function() {
+		// создать первоначальный дэшборд
+		window.dash = new Dashboard($('#plate'));
+
+		// создать в нём четыре окна
+		dash.areaManager.placeArea({ direction: 'full' }, Window, dash);
+		dash.areaManager.placeArea({ direction: 'bottom' }, Window, dash, {icon: 'lamp'});
+		dash.areaManager.placeArea({ direction: 'left' }, Window, dash, {title: 'Полный просмотр'});
+		dash.areaManager.placeArea({ direction: 'left' }, Window, dash, {title: 'Полный просмотр'});
+
+		// добавить вкладку в первое окно
+		dash.areaManager.areas[0].addTab({
+			title: 'Вкладко '
+			, animate: false
+			, opacity: 0.5
+			, backgroundColor: 'white'
+			
+		});
+
+		// в третье окно добавить 8 вкладок
+		for (var i = 0; i < 8; i++) {
+			dash.areaManager.areas[2].addTab({
+				title: 'В  ' + i
+				, animate: false
+				, icon: 'object'
+			});
+		}
+
+		$(window).resize(_.debounce(function(){ dash._redraw(); }, 300));
+
+		$('#create').click(function() {
+			new CMenu().show([{
+				caption: 'Показать основной dash'
+				, execute: function() {
+					console.log(dash);
+				}
+			}, {
+				caption: 'Новое окно'
+				, icon: {type : 'sprite', path : 'sprite-cmenu-all', class : 'cmenu-icon'}
+				, execute: function(e) {
+					dash.areaManager.add(e, Window);
+				}
+			}, {
+				caption: 'Сериализовать'
+				, icon: {type : 'sprite', path : 'sprite-cmenu-post_print', class : 'cmenu-icon'}
+				, execute: function() {
+					console.log(JSON.stringify(dash.areaManager.toJSON()));
+					console.log(dash.areaManager.toJSON());
+				}
+			}, {
+				caption: 'Поменять фон'
+				, icon: {type : 'sprite', path : 'sprite-cmenu-util_export', class : 'cmenu-icon'}
+				, submenu : [{
+					icon: {type : 'sprite', path : 'sprite-cmenu-net', class : 'cmenu-icon'}
+					, caption: 'Векторная мадам'
+					, execute: function() {
+						$('body').css('background-image', 'url("http://blog.perrohunter.com/wp-content/uploads/2010/03/Vector-Girl-vector-girl-1440x900.jpg")');
+					}
+				}, {
+					icon: {type : 'sprite', path : 'sprite-cmenu-result', class : 'cmenu-icon'}
+					, caption: 'Нирвана'
+					, execute: function() {
+						$('body').css('background-image', 'url("http://static.tumblr.com/zzdsgce/mKFm0bdvk/178701_papel-de-parede-nirvana--178701_1600x1200.jpg")');
+					}
+				}, {
+					icon: {type : 'sprite', path : 'sprite-cmenu-ru', class : 'cmenu-icon'}
+					, caption: 'Сочи'
+					, execute: function() {
+						$('body').css('background-image', 'url("http://scenery-wallpapers.com/walls/russia_sochi_night_view_russian_wallpaper-normal5.4.jpg")');
+					}
+				}]
+			}/*, {
+			 caption: 'Caption1'
+			 , icon: {type : 'img', path : './images/arrow_right.png', class : 'cmenu-icon'}
+			 , disabled: false
+			 , execute : function() {alert('Caption1');}
+			 , submenu : [{
+			 caption: 'Caption11'
+			 , icon: {type : 'img', path : './images/arrow_right.png', class : 'cmenu-icon'}
+			 , submenu : [{
+			 caption: 'Caption111'
+			 , icon: {type : 'img', path : './images/arrow_right.png', class : 'cmenu-icon'}
+			 , disabled: true
+			 ,execute : function() {alert('Caption111');}
+			 }]
+			 }]
+			 }, {
+			 caption: 'Caption2'
+			 , icon: {type : 'img', path : './images/arrow_right.png', class : 'cmenu-icon'}
+			 , disabled: true
+			 , submenu : [{
+			 caption: 'Caption21'
+			 , icon: {type : 'img', path : './images/arrow_right.png', class : 'cmenu-icon'}
+			 , disabled: true
+			 }]
+			 },{
+			 caption: 'Caption3'
+			 , icon: {type : 'img', path : './images/arrow_right.png', class : 'cmenu-icon'}
+			 , submenu : [{
+			 caption: 'Inner caption'
+			 , type: 'checkbox'
+			 , icon: {type : 'img', path : './images/arrow_right.png', class : 'cmenu-icon'}
+			 , check : false
+			 }]
+			 }*/], this);
+		});
+	});
+</script>
+</body>
+</html>

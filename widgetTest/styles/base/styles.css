@@ -1,0 +1,361 @@
+.dotline {
+	position: absolute;
+	/*height:593px;
+	width:1px;*/
+	overflow: hidden;
+	/*margin: 0 2px;*/
+	float: left;
+	/*background:url(images/dot.png)*/
+}
+
+.dotline-h {
+	background: url(../../images/system/dotH.png);
+	cursor: row-resize;
+}
+
+.dotline-v {
+	background: url(../../images/system/dotV.png);
+	cursor: col-resize;
+}
+
+/*icons*/
+
+span.close, .taskicon, .viewicon, .searchicon, .treeicon, a.split, a.close, a.max, a.min, a.lamp, a.tree {
+	background: url(../../images/system/icons.png) no-repeat;
+}
+
+span.close {
+	width: 9px;
+	height: 9px;
+	background-position: 0 -38px;
+	display: block;
+	position: absolute;
+	right: 4px;
+	top: 6px;
+}
+
+span.close:hover {
+	cursor: pointer
+}
+
+.taskicon {
+	background-position: 4px -107px;
+}
+
+.viewicon {
+	background-position: 4px -137px;
+}
+
+.treeicon {
+	background-position: 4px -227px;
+}
+
+.searchicon {
+	background-position: 4px -167px;
+}
+
+a.lamp {
+	background-position: 0 -197px;
+	width: 20px;
+	height: 23px;
+	left: 14px;
+	top: 2px;
+	position: absolute
+}
+
+a.tree {
+	background-position: 0 -228px;
+	width: 16px;
+	height: 16px;
+	left: 12px;
+	top: 2px;
+	position: absolute
+}
+
+a.split, a.close, a.max, a.min {
+	width: 9px;
+	height: 12px;
+	display: block;
+	position: absolute;
+}
+
+a.split {
+	background-position: 0 0;
+	left: 4px;
+	top: 4px;
+}
+
+a.close {
+	background-position: 0 -36px;
+	right: 5px;
+	top: 3px;
+}
+
+a.max {
+	background-position: 0 -24px;
+	right: 25px;
+	top: 3px;
+}
+
+a.min {
+	background-position: 0 -12px;
+	right: 45px;
+	top: 3px;
+}
+
+/*iwindow1*/
+.window1 {
+	width: 360px;
+}
+
+.window1 .content {
+	margin: 0 1px 0 0;
+	height: 550px;
+}
+
+.window1 .tabline {
+	border-left: 1px solid #7b7b7b;
+	border-top: 1px solid #7b7b7b;
+	border-right: 1px solid #7b7b7b;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#717171', endColorstr='#424242');
+	background: -webkit-linear-gradient(top, bottom, #717171, #424242);
+	background: -webkit-gradient(linear, left bottom, left top, color-stop(1, #717171), color-stop(0, #424242));
+	background: -moz-linear-gradient(top, #717171, #424242);
+	background: -o-linear-gradient(top, #717171, #424242);
+	background: -ms-linear-gradient(top, #717171, #424242);
+}
+
+.window1 .windowtitle {
+	color: #fff;
+	text-shadow: black 0 0 2px;
+}
+
+.window1 .tabline ul li {
+	background: #ccc
+}
+
+.window .tabline ul li.active {
+	border-bottom: 1px solid #f5f5f5;
+	/*z-index: 1000;*/
+	margin-top: 0;
+	background: #f5f5f5
+}
+
+.window .tabline ul li.active div {
+	margin: 1px 1px 0 1px;
+	background: -webkit-linear-gradient(top, bottom, #e6efff, #f5f5f5);
+	background: -webkit-gradient(linear, left bottom, left top, color-stop(1, #e6efff), color-stop(0, #f5f5f5));
+	background: -moz-linear-gradient(top, #e6efff, #f5f5f5);
+	background: -o-linear-gradient(top, #e6efff, #f5f5f5);
+	background: -ms-linear-gradient(top, #e6efff, #f5f5f5);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e6efff', endColorstr='#f5f5f5');
+	border-right: 1px solid #aec9e6;
+	border-top: 1px solid #aec9e6;
+	border-left: 1px solid #aec9e6;
+}
+
+
+.window .tabline ul li.active span.close {
+	right: 6px;
+	top: 8px;
+}
+
+.window1 a.split {
+	background-position: -10px 0;
+}
+
+.window1 a.close {
+	background-position: -10px -36px;
+}
+
+.window1 a.max {
+	background-position: -10px -24px;
+}
+
+.window1 a.min {
+	background-position: -10px -12px;
+}
+
+/*window2 */
+.window2 {
+	width: 500px;
+}
+
+.window2 .content {
+	margin: 0;
+	/*height: 224px;*/
+	bottom: 0;
+	left: 0;
+	top: 22px;
+	right: 0;
+	position: absolute;
+	/*overflow-y:scroll*/
+}
+
+.window2 .tabline {
+	height: 21px
+}
+
+.window2 hr {
+	background: #6c6c6c;
+	height: 1px;
+	overflow: hidden;
+	display: block;
+	width: 100%;
+	position: absolute;
+	top: 21px;
+	left: 0;
+	border: none;
+	margin: 0;
+	padding: 0
+}
+
+/*window3 */
+.window3 {
+	width: 350px;
+}
+
+.window3 .tabline ul li.active {
+	border-bottom: 1px solid #f5f5f5;
+	box-shadow: 0 0px 1px 1px #bbb;
+	z-index: 1000;
+	margin-top: 0;
+}
+
+.window3 .tabline ul li.active div {
+	background: -webkit-linear-gradient(top, bottom, #e5e5e5, #f5f5f5);
+	background: -webkit-gradient(linear, left bottom, left top, color-stop(1, #e5e5e5), color-stop(0, #f5f5f5));
+	background: -moz-linear-gradient(top, #e5e5e5, #f5f5f5);
+	background: -o-linear-gradient(top, #e5e5e5, #f5f5f5);
+	background: -ms-linear-gradient(top, #e5e5e5, #f5f5f5);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e5e5e5', endColorstr='#f5f5f5');
+
+}
+
+.window3 .tabline ul li.active div a {
+	margin-top: 2px;
+	height: 14px;
+	padding: 2px 13px 2px 25px;
+	opacity: 1
+}
+
+.window3 .content {
+	margin: 0 1px 0 0;
+	height: 550px;
+	overflow-y: scroll
+}
+
+.window3 .tabline ul li div a, .window3 .tabline ul li span.close {
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+}
+
+.window3 .tabline ul li.active span.close {
+	right: 4px;
+	top: 8px;
+	opacity: 1
+}
+.header {
+	position: absolute;
+	width: 100%;
+	background: #585d70;
+	height: 54px;
+	border-top: 1px solid #c0c3cc;
+	border-bottom: 4px solid #c0c3cc;
+}
+.main{
+	margin-top: 59px;
+}
+.activeWindow .tabline{
+	background: #3e4459;
+	border-color: #3e4459;
+}
+.tabline{
+	background: #585d70;
+	border-color: #585d70;
+}
+.windowtitle{
+	color: #fff;
+}
+.dotline-v{
+	background: #c0c3cc;
+}
+.window{
+	outline: 1px solid #808598;
+	border-top: none;
+}
+.activeWindow{
+	outline: 1px solid #585d70;
+}
+.dotline-h{
+	background: #c0c3cc;
+
+}
+.window .tabline ul li.active{
+	background: transparent;
+	border-bottom:3px solid #f58100;
+	box-sizing: border-box;
+	height: 24px;
+}
+.window .tabline ul li.active div {
+	background: transparent;
+	border: none;
+}
+.tabline ul li div {
+	background: transparent;
+	border: none;
+}
+.tabline ul li{
+	border: none;
+	height: 23px;
+}
+.window-tab .tabline ul li.active div a{
+	color: #fff;
+}
+.tabline ul li div a{
+	color: #a9adbe;
+}
+.activeWindow a.close{
+	background-position: 0 -252px;
+}
+a.close{
+	width: 14px;
+	height: 14px;
+	background-position: 0 -252px;
+}
+a.max{
+	width: 14px;
+	height: 14px;
+	background-position: 0 -276px;
+
+}
+.activeWindow a.max{
+	background-position: 0 -276px;
+}
+a.min{
+	background: transparent;
+}
+span.close{
+	background-position: 0 -299px;
+	width: 14px;
+	height: 14px;
+	top: 5px;
+	right: 6px;
+}
+.window .tabline ul li.active span.close{
+	top: 5px;
+	background-position: 0 -252px;
+}
+a.object{
+	opacity: .5;
+	background: url(../../images/system/icons.png) no-repeat;
+	background-position: 0 -322px;
+}
+div.scroll span {
+	background: transparent;
+	border: none;
+}
+div.scroll{
+	border: none;
+}
