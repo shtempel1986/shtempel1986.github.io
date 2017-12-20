@@ -359,3 +359,9 @@ div.scroll span {
 div.scroll{
 	border: none;
 }
+a.tree{
+	background-position: 0 -351px;
+}
+a.split{
+	background: transparent;
+}
